@@ -1,0 +1,132 @@
+<div class="page-width page-width--narrow section-{{ section.id }}-padding">
+  <h1 class="main-page-title page-title h0">
+    {{ page.title }}
+  </h1>
+
+  <div class="rte">
+    {{ page.content }}
+  </div>
+
+  <div class="consultation-form" style="margin-top: 3rem;">
+    <form id="consultation-form" method="POST" action="/contact#contact_form" class="contact-form">
+      <input type="hidden" name="form_type" value="contact">
+      <input type="hidden" name="utf8" value="✓">
+      <input type="hidden" name="contact[subject]" value="Consultation Request">
+
+      <div class="field" style="margin-bottom: 1.5rem;">
+        <label for="contact-name" class="field__label">Name *</label>
+        <input
+          type="text"
+          id="contact-name"
+          name="contact[name]"
+          class="field__input"
+          required
+          placeholder="Your name"
+        >
+      </div>
+
+      <div class="field" style="margin-bottom: 1.5rem;">
+        <label for="contact-email" class="field__label">Email *</label>
+        <input
+          type="email"
+          id="contact-email"
+          name="contact[email]"
+          class="field__input"
+          required
+          placeholder="your@email.com"
+        >
+      </div>
+
+      <div class="field" style="margin-bottom: 1.5rem;">
+        <label for="contact-company" class="field__label">Company Name</label>
+        <input
+          type="text"
+          id="contact-company"
+          name="contact[company]"
+          class="field__input"
+          placeholder="Your company (optional)"
+        >
+      </div>
+
+      <div class="field" style="margin-bottom: 1.5rem;">
+        <label for="contact-product" class="field__label">Product Interest *</label>
+        <select id="contact-product" name="contact[product_interest]" class="field__input" required>
+          <option value="">Select a product category...</option>
+          <option value="Private Label - Skincare">Private Label - Skincare</option>
+          <option value="Private Label - Haircare">Private Label - Haircare</option>
+          <option value="Private Label - Body Care">Private Label - Body Care</option>
+          <option value="Custom Formulation">Custom Formulation</option>
+          <option value="Contract Manufacturing">Contract Manufacturing</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <div class="field" style="margin-bottom: 1.5rem;">
+        <label for="contact-quantity" class="field__label">Estimated Order Quantity</label>
+        <select id="contact-quantity" name="contact[quantity]" class="field__input">
+          <option value="">Select quantity range...</option>
+          <option value="100-500 units">100-500 units (MOQ)</option>
+          <option value="500-1000 units">500-1,000 units</option>
+          <option value="1000-5000 units">1,000-5,000 units</option>
+          <option value="5000+ units">5,000+ units</option>
+          <option value="Not sure yet">Not sure yet</option>
+        </select>
+      </div>
+
+      <div class="field" style="margin-bottom: 1.5rem;">
+        <label for="contact-message" class="field__label">Tell us about your project *</label>
+        <textarea
+          id="contact-message"
+          name="contact[body]"
+          class="field__input"
+          rows="5"
+          required
+          placeholder="Describe your product needs, timeline, and any specific requirements..."
+        ></textarea>
+      </div>
+
+      <button type="submit" class="button button--primary" style="width: 100%; padding: 1.5rem;">
+        Request Consultation
+      </button>
+
+      <p style="margin-top: 1rem; text-align: center; color: #666; font-size: 0.9rem;">
+        We typically respond within 24 hours
+      </p>
+    </form>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Consultation Form",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "Consultation Form"
+    }
+  ]
+}
+{% endschema %}

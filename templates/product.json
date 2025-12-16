@@ -23,20 +23,10 @@
         "price": {
           "type": "price"
         },
-        "variant_picker": {
-          "type": "variant_picker",
+        "consult_button": {
+          "type": "custom_liquid",
           "settings": {
-            "picker_type": "button"
-          }
-        },
-        "quantity_selector": {
-          "type": "quantity_selector"
-        },
-        "buy_buttons": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true
+            "custom_liquid": "<a href=\"/pages/book-consultation\" class=\"button button--primary\" style=\"width: 100%; text-align: center; padding: 1.5rem; font-size: 1.1rem;\">Book a Consultation for Unit Pricing</a><p style=\"margin-top: 1rem; text-align: center; color: #666; font-size: 0.9rem;\">MOQ and pricing vary based on your requirements</p>"
           }
         },
         "description": {
@@ -45,36 +35,36 @@
         "collapsible-row-0": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Materials",
-            "icon": "leather",
-            "content": "",
+            "heading": "Ingredients & INCI",
+            "icon": "leaf",
+            "content": "<p>Full ingredient list and INCI names provided upon consultation. All formulations are compliant with FDA and EU cosmetic regulations.</p>",
             "page": ""
           }
         },
         "collapsible-row-1": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Shipping & Returns",
-            "icon": "truck",
-            "content": "",
+            "heading": "MOQ & Lead Times",
+            "icon": "box",
+            "content": "<p><strong>Minimum Order:</strong> 100 units<br><strong>Lead Time:</strong> 4-6 weeks for private label, 8-12 weeks for custom formulation<br><strong>Samples:</strong> Available upon request</p>",
             "page": ""
           }
         },
         "collapsible-row-2": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Dimensions",
-            "icon": "ruler",
-            "content": "",
+            "heading": "Customization Options",
+            "icon": "perfume",
+            "content": "<p>Available customizations include:<br>• Custom fragrance<br>• Color matching<br>• Active ingredient adjustments<br>• Packaging selection<br>• Label design services</p>",
             "page": ""
           }
         },
         "collapsible-row-3": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Care Instructions",
-            "icon": "heart",
-            "content": "",
+            "heading": "Private Label Process",
+            "icon": "clipboard",
+            "content": "<p>1. Consultation & product selection<br>2. Sample approval<br>3. Packaging & label design<br>4. Production run<br>5. Quality testing & fulfillment</p>",
             "page": ""
           }
         },
@@ -90,9 +80,7 @@
         "title",
         "caption",
         "price",
-        "variant_picker",
-        "quantity_selector",
-        "buy_buttons",
+        "consult_button",
         "description",
         "collapsible-row-0",
         "collapsible-row-1",
